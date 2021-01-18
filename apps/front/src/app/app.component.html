@@ -4,6 +4,10 @@
 <main>
   <section>
     <h2>FizzBuzz Test</h2>
-
+    <div class="grid">
+      <p *ngFor="let el of fizzBuzz" class="grid-item" [ngClass]="el.includes('zz') ? el.toLowerCase(): ''">
+        {{el}}
+      </p>
+    </div>
   </section>
 </main>

@@ -87,7 +87,8 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement;
     const fizzbuzz = compiled.queryAll(By.css('.fizzbuzz')).length;
-    expect(fizzbuzz === 100 / 15);
+    const limit = fixture.componentInstance.limit;
+    expect(fizzbuzz === limit / 15);
   });
 
   it('render Fizz elements', () => {
@@ -96,7 +97,8 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement;
     const fizzbuzz = compiled.queryAll(By.css('.fizzbuzz')).length;
     const fizz = compiled.queryAll(By.css('.fizz')).length;
-    expect(fizz - fizzbuzz === 100/3 - 100/15);
+    const limit = fixture.componentInstance.limit;
+    expect(fizz - fizzbuzz === limit/3 - limit/15);
   });
 
   it('render Buzz elements', () => {
@@ -104,7 +106,8 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement;
     const fizzbuzz = compiled.queryAll(By.css('.fizzbuzz')).length;
-    const buzz = compiled.queryAll(By.css('.fizz')).length;
-    expect(buzz - fizzbuzz === 100/3 - 100/15);
+    const buzz = compiled.queryAll(By.css('.buzz')).length;
+    const limit = fixture.componentInstance.limit;
+    expect(buzz - fizzbuzz === limit/5 - limit/15);
   });
 });
