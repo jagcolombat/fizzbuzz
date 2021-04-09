@@ -2,7 +2,7 @@
 
 This project was generated using [Nx](https://nx.dev).
 
-This project has a implementation of the FizzBuzz algorithm and used TDD for this purpose.
+This project has an implementation of the FizzBuzz algorithm and used TDD for this purpose.
 
 <p align="center"><img src="apps/front/src/assets/example.png" width="450"></p>
 
