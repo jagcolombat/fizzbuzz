@@ -16,11 +16,11 @@ export class AppComponent {
   }
 
   private init() {
-    let temp = [];
+    const temp = [];
     for(let i =1; i <= this.limit; i++) {
       temp.push(this.calculateFizzBuzz(i));
     }
-    this.fizzBuzz = [...temp];
+    this.fizzBuzz = temp;
   }
 
   calculateFizzBuzz(i: number) {
